@@ -7,7 +7,7 @@
 import Nav from "../components/nav";
 import React  from "react";
 import { Link } from "react-router-dom";
-import { useEffect,useState } from "react";
+import { useEffect,useState } from "react";1
 import './Home.css'
 
 
@@ -28,27 +28,30 @@ const Category=()=>{
     <>
      <Nav/>
       {/* <h1 onClick={()=>getCategory()}>Category</h1> */}
-      <h1 className="cat">Category</h1>
-      {Category.map((e,index)=>{
-        return<>
-        <div className="all">
-          <div className="catname">
-            <Link to={`/subcategory/${e.id}`}>
-              <h2>{e.cat_name}</h2>
-            </Link>
-            
-           {/*  
-           <h2>{e.id}</h2> */}
-            {/* <h2>{e.cat_pic}</h2> */}
-          </div>
-          <div className="catpic">
-            <img 
-              src={e.cat_pic} 
-              alt={e.cat_name} 
-              style={{ width: '200px', height: 'auto' }}/>
-          </div>
-        </div>
-        </>
+       
+ 
+            <h1 className="cat">Category</h1>
+            {Category.map((e,index)=>{
+              return<>
+              <div className="all">
+                <div className="catname">
+                  <Link to={`/subcategory/${e.id}`}>
+                    <h2>{e.cat_name}</h2>
+                  </Link>
+                  
+                {/*  
+                <h2>{e.id}</h2> */}
+                  {/* <h2>{e.cat_pic}</h2> */}
+                </div>
+                <div className="catpic">
+                  <img 
+                    src={e.cat_pic} 
+                    alt={e.cat_name} 
+                    style={{ width: '200px', height: 'auto' }}/>
+                </div>
+              </div>
+        
+      </>
     }
     )}
   </>

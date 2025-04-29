@@ -8,7 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Createuser from './pages/createuser.jsx';
-import SubCategory from './pages/SubCategory.jsx';
+import Subcategory from './pages/SubCategory.jsx';
+import Product from './pages/Product.jsx';
 
 
 function App() {
@@ -17,9 +18,14 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path='subcategory/:id' element={ <SubCategory/> } />
+          {/* <Route path='subcategory/:id' element={ <SubCategory/> } /> */}
           <Route path="About" element={<About />} />
           <Route path='createuser' element={< Createuser/>}/>
+          {/* <Route path="/category/:categoryId" element={<Subcategory />} /> */}
+          {/* <Route path="/subcategory/:id" element={<Subcategory />} /> */}
+          <Route path="/subcategory/:id" element={<Subcategory />} />
+          <Route path="/Product/:id" element={<Product/>}/>
+
          
 
         </Routes>
