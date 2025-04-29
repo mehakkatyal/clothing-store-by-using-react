@@ -27,7 +27,7 @@ const Subcategory=()=>{
                    <h2>{e.sub_cat_name}</h2>
                    </Link>
                 <div className='img'>
-                    <img src={e.sub_cat_pic}
+                    <img src={`http://localhost:8000${e.sub_cat_pic}`}
                     alt={e.sub_cat_name}
                     style={{ width: '200px', height: 'auto' }}/>       
                 </div>
