@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 const Product=()=>{
     const [Productlist,setProductlist]=useState([])
@@ -16,14 +16,24 @@ useEffect(()=>{
       },[])
       return(
         <>
-        {Productlist.map((e,index)=>{
-            return<>
-            <h2>{e.product_name}</h2>
-            </>
-        }
+          {Productlist.map((product, index) => (
+            <div key={index}>
+              <Link to={`/productdetail/${product.id}`}>
+              <h2>{product.product_name}</h2>
+              </Link>
+              <h3>{product.product_price}</h3>
+              {product.images && product.images.length > 0 && (
+                <img
+                  src={`http://localhost:8000${product.images[0].image}`}
+                  alt="Product"
+                  style={{ width: "200px", height: "auto" }}
+                />
+              
     )}
-        </>
-      )
+  </div>
+))}
+</>
+);
 }
 export default Product
 

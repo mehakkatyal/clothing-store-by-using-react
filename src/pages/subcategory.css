@@ -1,0 +1,153 @@
+/* .all {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+  
+    text-align: center;
+  margin:
+40px;
+  }
+  .img {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition:transform 0.3s ease;
+  } */
+  /* .all {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:30px;
+    padding:    40px;
+    background-color: #f7f7f7;
+  }
+   */
+  /* Individual card */
+  /* .card {
+    background-color: #fff;
+    width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image container */
+  /* .img {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+  }
+  
+  .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .img img {
+    transform: scale(1.05);
+  } */
+  
+  /* Name/title section */
+  /* .name {
+    padding: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .name h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .name a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .name a:hover {
+    color: #d32f2f;
+  } */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Flex container for cards */
+  .all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  /* Individual card */
+  .card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 190px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image styling */
+  .img {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+  }
+  
+  .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .img img {
+    transform: scale(1.05);
+  }
+  
+  /* Subcategory name */
+  .name {
+    padding: 16px;
+  }
+  
+  .name h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .name a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .name a:hover {
+    color: #e91e63;
+  }
+   
+  
+  

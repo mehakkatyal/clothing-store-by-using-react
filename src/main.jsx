@@ -10,6 +10,8 @@ import About from './pages/About.jsx';
 import Createuser from './pages/createuser.jsx';
 import Subcategory from './pages/SubCategory.jsx';
 import Product from './pages/Product.jsx';
+import Productdetail from './pages/productdetail.jsx';
+import Login from './pages/login.jsx';
 
 
 function App() {
@@ -25,6 +27,10 @@ function App() {
           {/* <Route path="/subcategory/:id" element={<Subcategory />} /> */}
           <Route path="/subcategory/:id" element={<Subcategory />} />
           <Route path="/Product/:id" element={<Product/>}/>
+          <Route path="/productdetail/:id" element={<Productdetail />} />
+          <Route path='login' element={<Login/>}/>
+          
+         
 
          
 

@@ -39,9 +39,7 @@ const Category=()=>{
                     <h2>{e.cat_name}</h2>
                   </Link>
                   
-                {/*  
-                <h2>{e.id}</h2> */}
-                  {/* <h2>{e.cat_pic}</h2> */}
+               
                 </div>
                 <div className="catpic">
                   <img 

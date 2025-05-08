@@ -12,7 +12,7 @@ const Nav=()=>{
             <button className="createuser"><Link to="createuser">Createuser</Link></button>
          
 
-            <button className="login">Login</button>
+            <button className="login"><Link to="login">login</Link></button>
             {/* <button className="create">Create User</button> */}
         </div>
 
