@@ -11,7 +11,10 @@ import Createuser from './pages/createuser.jsx';
 import Subcategory from './pages/SubCategory.jsx';
 import Product from './pages/Product.jsx';
 import Productdetail from './pages/productdetail.jsx';
-import Login from './pages/login.jsx';
+ import Login from './pages/Login.jsx';
+import Addcategory from './pages/Addcategory.jsx';
+import Updatecategory from './pages/Updatecategory.jsx';
+
 
 
 function App() {
@@ -28,7 +31,10 @@ function App() {
           <Route path="/subcategory/:id" element={<Subcategory />} />
           <Route path="/Product/:id" element={<Product/>}/>
           <Route path="/productdetail/:id" element={<Productdetail />} />
+          {/* <Route path='login' element={<Login/>}/> */}
           <Route path='login' element={<Login/>}/>
+          <Route path='Addcategory' element={<Addcategory/>}/>
+          <Route path='/Addcategory/:id' element={<Addcategory/>}/>
           
          
 

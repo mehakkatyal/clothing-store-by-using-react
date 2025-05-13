@@ -8,11 +8,14 @@
 // }
     import { useState } from "react";
     import Nav from "../components/nav";
+    import {useNavigate } from "react-router-dom";
+
     
     function Myform() {
-        const [name, setname] = useState("");
-        const [firstname, setfirstname] = useState("");
-        const [lastname, setlastname] = useState("");
+        const navigate=useNavigate();
+        const [username, setusername] = useState("");
+        const [first_name, setfirstname] = useState("");
+        const [last_name, setlastname] = useState("");
         const [password, setpassword] = useState("");
         const [email, setemail] = useState("");
         const [phonenumber, setphonenumber] = useState("");
@@ -20,41 +23,38 @@
     
         const submit = async (e) => {
             e.preventDefault();
+        
     
             const userData = {
-                username: name,
-                password: password,
-                first_name: firstname,
-                last_name: lastname,
-                email: email,
-                phone: phonenumber, 
-                is_vendor: is_vendor == "yes",
+                username,
+                first_name,
+                last_name,
+                email,
+                password,
+                phonenumber,
+                is_vendor:is_vendor==="yes"
             };
-    
-            try {
-                const response = await fetch("http://localhost:8000/api/userprofile/", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(userData),
-                  
-                });
-    
-                if (response.ok) {
-                    const data = await response.json();
-                    alert("User created successfully!");
-                    console.log(data);
-                } else {
-                    const errorData = await response.json();
-                    console.error("Error:", errorData);
-                    alert("Failed to create user.");
-                }
-            } catch (error) {
-                console.error("Network error:", error);
-                alert("Something went wrong.");
+            const response = await fetch("http://localhost:8000/api/user/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    //  "Authorization": `Token ${token}`
+                },
+                body: JSON.stringify(userData),
+              
+            });
+           
+              
+       
+
+            if (response.ok){
+                alert("user created sussfully");
+                navigate('/Login');
+            } else{
+                alert("failed to create user")
             }
         };
+
     
         return (
             <>
@@ -68,8 +68,8 @@
                                 <label>User Name</label>
                                 <input
                                     type="text"
-                                    value={name}
-                                    onChange={(e) => setname(e.target.value)}
+                                    value={username}
+                                    onChange={(e) => setusername(e.target.value)}
                                     required
                                 />
                             </div>
@@ -77,7 +77,7 @@
                                 <label>First Name</label>
                                 <input
                                     type="text"
-                                    value={firstname}
+                                    value={first_name}
                                     onChange={(e) => setfirstname(e.target.value)}
                                     required
                                 />
@@ -86,7 +86,7 @@
                                 <label>Last Name</label>
                                 <input
                                     type="text"
-                                    value={lastname}
+                                    value={last_name}
                                     onChange={(e) => setlastname(e.target.value)}
                                     required
                                 />
@@ -112,7 +112,7 @@
                             <div className="phone">
                                 <label>Phone Number</label>
                                 <input
-                                    type="tel"
+                                    type="text"
                                     value={phonenumber}
                                     onChange={(e) => setphonenumber(e.target.value)}
                                 />
@@ -132,6 +132,7 @@
             </>
         );
     }
+    
     
     export default Myform;
 

@@ -93,7 +93,9 @@ const ProductDetail = () => {
                 ) : (
                     <p>No images available.</p>
                 )}
-            </div>
+               
+            </div><br></br>
+             <button classname="order">Order Now</button>
         </div>
     );
 };
